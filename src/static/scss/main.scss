@@ -299,7 +299,7 @@ a.active {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-
+  touch-action: none;
   .canvas {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background: silver;
