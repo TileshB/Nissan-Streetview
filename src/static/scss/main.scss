@@ -189,7 +189,8 @@ button#resetPuzzle {
     display: none;
   }
   p {
-    padding-top: 50px;
+    padding-top: 10px;
+    font-size: 27px;
   }
 }
 
@@ -215,7 +216,7 @@ button#resetPuzzle {
 a#close {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 10px;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;

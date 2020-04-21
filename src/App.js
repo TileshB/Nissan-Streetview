@@ -61,7 +61,7 @@ function App() {
       <div id="share-overlay" className="share-overlay closed">
         {/* <!-- <a href="#" id="download-image">Download Image</a> --> */}
         <a id="close">x</a>
-        <p>Enjoyed that puzzle? Share the experience</p>
+        <p>Congratulations you finished that in <span id="end-time"></span>! Enjoyed that puzzle? Share the experience</p>
         <div className="icons">
           <a
             href="https://www.facebook.com/sharer.php?u="

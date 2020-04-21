@@ -429,12 +429,31 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
 
           if (js.pieces.length === 0) {
             document.getElementById("body").className = "solved";
-            // alert("YEEET");
+			// alert("YEEET");
+			stopTimer();
+			var timecomplete = "00:00:00";
+			if(document.getElementById("hours").innerText == "00"){
+				if(document.getElementById("minutes").innerText == "00"){
+					timecomplete = document.getElementById("seconds").innerText + " seconds ";
+				}
+				else{
+					if(document.getElementById("minutes").innerText == "01"){
+						timecomplete = document.getElementById("minutes").innerText + " minute and " + document.getElementById("seconds").innerText + " seconds ";
+					}else{
+						timecomplete =  document.getElementById("hours").innerText + "hours, " + document.getElementById("minutes").innerText + " minutes and " + document.getElementById("seconds").innerText + " seconds ";
+					}
+					
+				}
+			}
+			else{
+				timecomplete = document.getElementById("minutes").innerText + " minute and " + document.getElementById("seconds").innerText + " seconds ";
+			}
+			document.getElementById("end-time").innerHTML = timecomplete;
             setTimeout(function () {
               document
                 .getElementById("share-overlay")
                 .classList.toggle("closed");
-            }, 2000);
+            }, 1000);
           }
         }
       },
