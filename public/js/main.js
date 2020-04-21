@@ -8,17 +8,17 @@ var imageloadtotal = 0;
 var allimages = [
   {
     name: "city",
-    images: ["/static/media/puzzle-1.fada46fe.jpg"],
+    images: ["/static/media/puzzle-1.1d7037ff.jpg"],
     dir: "",
   },
   {
     name: "art",
-    images: ["/static/media/puzzle-2.1c520122.jpg"],
+    images: ["/static/media/puzzle-2.a70b4fa5.jpg"],
     dir: "",
   },
   {
     name: "art2",
-    images: ["/static/media/puzzle-3.a790ec68.jpg"],
+    images: ["/static/media/puzzle-3.542683fc.jpg"],
     dir: "",
   },
 ];
