@@ -284,6 +284,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         js.canvas.addEventListener(
           onmove,
           function (e) {
+			  e.preventDefault();
             if (js.clickedpiece !== -1) {
               js.general.movePiece(e);
             }
