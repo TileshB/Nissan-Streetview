@@ -64,12 +64,12 @@ function App() {
         <p>Congratulations you finished that in <span id="end-time"></span>! Enjoyed that puzzle? Share the experience</p>
         <div className="icons">
           <a
-            href="https://www.facebook.com/sharer.php?u="
+            href="https://www.facebook.com/sharer.php?u=URL"
             target="_blank"
             className="fa fa-facebook"
           ></a>
-          <a href="#" target="_blank" className="fa fa-twitter"></a>
-          <a href="#" target="_blank" className="fa fa-linkedin"></a>
+          <a href="https://twitter.com/intent/tweet?text=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&url=URL" target="_blank" className="fa fa-twitter"></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&title=Nissan-Streetview-Puzzle&summary=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&source=Nissan&url=URL" target="_blank" className="fa fa-linkedin"></a>
         </div>
       </div>
       <div className="canvaswrapper" id="canvasparent">
