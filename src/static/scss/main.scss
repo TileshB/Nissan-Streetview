@@ -23,6 +23,20 @@ body {
   }
 }
 
+:not(:root):fullscreen::backdrop {
+  background: white;
+}
+
+body:fullscreen {
+  background-color: white;
+}
+body:-webkit-full-screen {
+  background-color: white;
+}
+body:-moz-full-screen {
+  background-color: white;
+}
+
 h2 {
   font-size: 36px;
   font-family: "Nissan Light", "Nissan Regular", Verdana, Arial, sans-serif;
@@ -90,7 +104,31 @@ input.btn {
   }
   &.btn-secondary {
     background: #c3002f;
+    outline: none;
+    &:hover{
+      background: #920023;
+    }
   }
+  &.difficult{
+    background: #eee;
+    color: black;
+    &:hover{
+      background: #c3002f;
+      color: white;
+    }
+    &.active{
+      background: #c3002f;
+      color: white;
+    }
+  }
+}
+
+.expand{
+  font-size: 24px;
+    display: flex;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
 }
 
 .intro {
@@ -102,8 +140,10 @@ input.btn {
   text-align: center;
   opacity: 1;
   right: 0vw;
+  top: 25%;
   -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 2;
   &.hide {
     right: 100vw;
     opacity: 0;
@@ -369,10 +409,13 @@ a.active {
   h2 {
     font-size: 20px;
   }
+  .intro {
+    top: 30%;
+  }
 
   button#resetPuzzle {
     position: absolute;
-    top: 180px;
+    top: 90vh;
     right: 50%;
     transform: translate(50%);
     outline: none;
@@ -390,7 +433,7 @@ a.active {
   }
 
   .canvaswrapper {
-    height: 60vh;
+    height: 100%;
   }
 
   .share-overlay {

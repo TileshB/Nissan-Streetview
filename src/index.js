@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import "./static/less/variables.less"
-import "./static/less/page.less"
-import "./static/less/styles.less"
-import "./static/less/buttons.less"
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
