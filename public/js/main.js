@@ -8,17 +8,17 @@ var imageloadtotal = 0;
 var allimages = [
   {
     name: "city",
-    images: ["http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-1.jpg"],
+    images: ["./static/media/puzzle-1.1d7037ff.jpg"],
     dir: "",
   },
   {
     name: "art",
-    images: ["http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-2.jpg"],
+    images: ["./static/media/puzzle-2.a70b4fa5.jpg"],
     dir: "",
   },
   {
     name: "art2",
-    images: ["http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-3.jpg"],
+    images: ["./static/media/puzzle-3.542683fc.jpg"],
     dir: "",
   },
 ];
@@ -157,7 +157,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
       initPuzzle: function () {
         // var url = URL.createObjectURL(allimages[currPuzzle].images[0]);
         js.puzzle = new Image();
-        // console.log("Curr puzzle: ", currPuzzle)
+        console.log("Curr puzzle: ", currPuzzle)
         document.getElementById("body").className = "";
         js.puzzle.src = allimages[currPuzzle].images[0];
         js.idealw = js.puzzle.width;
@@ -606,8 +606,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         // alert("CHAAAANGEEES");
         // var elAcross = document.getElementById('piecesx');
 		// var elDown = document.getElementById('piecesy');
-		resetTimer();
-        startTimer();
+
         document.getElementById("intro").classList.add("hide");
         document.getElementById("hamburger").classList.remove("active");
         document.getElementById("hamburger").classList.remove("hidden");
@@ -616,6 +615,8 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         var across = piecex;
         var down = piecey;
         currPuzzle = 1;
+        resetTimer();
+        startTimer();
         this.initPuzzle();
         // js.puzzle = new Image();
         // js.puzzle.src = allimages[currPuzzle].images[0];
@@ -639,8 +640,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         // alert("CHAAAANGEEES");
         // var elAcross = document.getElementById('piecesx');
 		// var elDown = document.getElementById('piecesy');
-		resetTimer();
-        startTimer();
+
         document.getElementById("intro").classList.add("hide");
         document.getElementById("hamburger").classList.remove("active");
         document.getElementById("hamburger").classList.remove("hidden");
@@ -649,6 +649,8 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         currPuzzle = 2;
         var across = piecex;
         var down = piecey;
+        resetTimer();
+        startTimer();
         this.initPuzzle();
         // js.puzzle = new Image();
         // js.puzzle.src = allimages[currPuzzle].images[0];
