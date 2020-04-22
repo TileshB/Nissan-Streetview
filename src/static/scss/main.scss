@@ -324,8 +324,8 @@ a.active {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  margin: 10px;
-  height: calc(100vh - 40px);
+  margin: 50px 10px 10px 10x;
+  height: 80vh;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -515,7 +515,7 @@ a.active {
   }
 
   .canvaswrapper {
-    height: 100%;
+    height: 50vh;
   }
 
   // #difficulty-holder{
