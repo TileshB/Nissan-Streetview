@@ -70,9 +70,9 @@ function App() {
 
         <p>Choose a puzzle</p>
         <br />
-        <img className="imgChoice" id="option1" src={img1} alt="" />
-        <img className="imgChoice" id="option2" src={img2} alt="" />
-        <img className="imgChoice" id="option3" src={img3} alt="" />
+          <img className="imgChoice" id="option1" src={img1} alt="" />
+          <img className="imgChoice" id="option2" src={img2} alt="" />
+          <img className="imgChoice" id="option3" src={img3} alt="" />
       </div>
       <div id="share-overlay" className="share-overlay closed">
         {/* <!-- <a href="#" id="download-image">Download Image</a> --> */}

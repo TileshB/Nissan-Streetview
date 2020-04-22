@@ -169,7 +169,7 @@ display: none;
   text-align: center;
   opacity: 1;
   right: 0vw;
-  top: 25%;
+  top: 15%;
   -webkit-transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: 2;
@@ -433,6 +433,33 @@ a.active {
   text-align: center;
 }
 
+@media (min-width: 601px) and (max-width: 960px) {
+  button#back-mobi {
+    display: block;
+    position: absolute;
+    top: 58px;
+    left: 20px;
+    opacity: 1;
+    &.hidden {
+      opacity: 0;
+    }
+  }
+  
+
+  a.hamburger {
+  display: none;
+  }
+
+  button#resetPuzzle {
+    position: absolute;
+    top: 90vh;
+    right: 50%;
+    transform: translate(50%);
+    outline: none;
+  }
+
+}
+
 @media only screen and (max-width: 600px) {
   .imgChoice {
     width: 80% !important;
@@ -448,6 +475,11 @@ a.active {
   }
   .intro {
     top: 25vh;
+  }
+
+  #choices{
+    height: 300px;
+    overflow-y: scroll;
   }
 
   button#resetPuzzle {
