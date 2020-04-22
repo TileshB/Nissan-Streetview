@@ -8,17 +8,17 @@ var imageloadtotal = 0;
 var allimages = [
   {
     name: "city",
-    images: ["/static/media/puzzle-1.1d7037ff.jpg"],
+    images: ["http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-1.jpg"],
     dir: "",
   },
   {
     name: "art",
-    images: ["/static/media/puzzle-2.a70b4fa5.jpg"],
+    images: ["http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-2.jpg"],
     dir: "",
   },
   {
     name: "art2",
-    images: ["/static/media/puzzle-3.542683fc.jpg"],
+    images: ["http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-3.jpg"],
     dir: "",
   },
 ];

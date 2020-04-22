@@ -2,9 +2,9 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "./static/scss/main.scss";
-import img1 from "./static/img/puzzle-1.jpg";
-import img2 from "./static/img/puzzle-2.jpg";
-import img3 from "./static/img/puzzle-3.jpg";
+// import img1 from "http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-1.jpg";
+// import img2 from "http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-2.jpg";
+// import img3 from "http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-3.jpg";
 import nissanlogo from "./static/img/Nissan col.png";
 
 function App() {
@@ -54,9 +54,9 @@ function App() {
         </div>
         <p>Choose a puzzle</p>
         <br />
-        <img className="imgChoice" id="option1" src={img1} alt="" />
-        <img className="imgChoice" id="option2" src={img2} alt="" />
-        <img className="imgChoice" id="option3" src={img3} alt="" />
+        <img className="imgChoice" id="option1" src="http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-1.jpg" alt="" />
+        <img className="imgChoice" id="option2" src="http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-2.jpg" alt="" />
+        <img className="imgChoice" id="option3" src="http://tbwa-cdn.co.za/nissan/2020/Streetview%20Puzzle/puzzle-3.jpg" alt="" />
       </div>
       <div id="share-overlay" className="share-overlay closed">
         {/* <!-- <a href="#" id="download-image">Download Image</a> --> */}
