@@ -16,7 +16,7 @@ function App() {
           <span></span>
         </a>
         <img className="logo" src={nissanlogo} alt="" />
-        <h2>Streetview Puzzle</h2>
+        <h2 id="streetview" className="">Streetview Puzzle</h2>
         {/* <br /> */}
         <div id="timer-holder" className="hidden">
           <h3>Timer</h3>
@@ -95,7 +95,7 @@ function App() {
       <div className="canvaswrapper" id="canvasparent">
         <canvas id="canvas" className="canvas"></canvas>
       </div>
-      <i id="expand" className="fas fa-expand expand"></i>
+      {/* <i id="expand" className="fas fa-expand expand"></i> */}
       {/* 
   <!--[if lt IE 9]>
       <script>

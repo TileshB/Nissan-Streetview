@@ -27,6 +27,15 @@ div#mobi{
   display: none;
 }
 
+
+#streetview{
+  display: block;
+  &.hidden{
+    display: none;
+  }
+}
+
+
 :not(:root):fullscreen::backdrop {
   background: white;
 }

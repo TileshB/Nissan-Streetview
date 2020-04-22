@@ -579,6 +579,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("hamburger").classList.remove("hidden");
         document.getElementById("resetPuzzle").classList.remove("hidden");
         document.getElementById("timer-holder").classList.remove("hidden");
+        document.getElementById("streetview").classList.add("hidden");
         document.getElementById("body").className = "";
         var across = piecex;
         var down = piecey;
@@ -614,6 +615,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("hamburger").classList.remove("hidden");
         document.getElementById("resetPuzzle").classList.remove("hidden");
         document.getElementById("timer-holder").classList.remove("hidden");
+        document.getElementById("streetview").classList.add("hidden");
         document.getElementById("body").className = "";
         var across = piecex;
         var down = piecey;
@@ -648,6 +650,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("hamburger").classList.remove("hidden");
         document.getElementById("resetPuzzle").classList.remove("hidden");
         document.getElementById("timer-holder").classList.remove("hidden");
+        document.getElementById("streetview").classList.add("hidden");
         document.getElementById("body").className = "";
         currPuzzle = 2;
         var across = piecex;
@@ -928,37 +931,38 @@ window.onload = function () {
     document.getElementById("intro").classList.toggle("hide");
     document.getElementById("timer-holder").classList.toggle("hidden");
     document.getElementById("resetPuzzle").classList.toggle("hidden");
+    document.getElementById("streetview").classList.toggle("hidden");
   };
 
-  this.document.getElementById("expand").onclick = function () {
-    var elem = document.getElementById("body");
-    if (document.getElementById("expand").classList.contains("contract")) {
-      document.getElementById("expand").classList.remove("contract");
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      }
-    } else {
-      document.getElementById("expand").classList.add("contract");
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.mozRequestFullScreen) {
-        /* Firefox */
-        elem.mozRequestFullScreen();
-      } else if (elem.webkitRequestFullscreen) {
-        /* Chrome, Safari & Opera */
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        /* IE/Edge */
-        elem.msRequestFullscreen();
-      }
-    }
-  };
+  // this.document.getElementById("expand").onclick = function () {
+  //   var elem = document.getElementById("body");
+  //   if (document.getElementById("expand").classList.contains("contract")) {
+  //     document.getElementById("expand").classList.remove("contract");
+  //     if (document.exitFullscreen) {
+  //       document.exitFullscreen();
+  //     } else if (document.mozCancelFullScreen) {
+  //       document.mozCancelFullScreen();
+  //     } else if (document.webkitExitFullscreen) {
+  //       document.webkitExitFullscreen();
+  //     } else if (document.msExitFullscreen) {
+  //       document.msExitFullscreen();
+  //     }
+  //   } else {
+  //     document.getElementById("expand").classList.add("contract");
+  //     if (elem.requestFullscreen) {
+  //       elem.requestFullscreen();
+  //     } else if (elem.mozRequestFullScreen) {
+  //       /* Firefox */
+  //       elem.mozRequestFullScreen();
+  //     } else if (elem.webkitRequestFullscreen) {
+  //       /* Chrome, Safari & Opera */
+  //       elem.webkitRequestFullscreen();
+  //     } else if (elem.msRequestFullscreen) {
+  //       /* IE/Edge */
+  //       elem.msRequestFullscreen();
+  //     }
+  //   }
+  // };
 
   document.getElementById("close").onclick = function () {
     document.getElementById("share-overlay").classList.toggle("closed");
