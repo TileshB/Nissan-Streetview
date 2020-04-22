@@ -444,6 +444,10 @@ a.active {
       opacity: 0;
     }
   }
+
+  .canvaswrapper {
+    height: 50vh;
+  }
   
 
   a.hamburger {
@@ -470,7 +474,7 @@ a.active {
   }
 
   #timer-holder{
-    padding-top: 18vh;
+    padding-top: 30px;
   }
 
   h2 {
@@ -488,7 +492,7 @@ a.active {
 
   button#resetPuzzle {
     position: absolute;
-    top: 90vh;
+    top: 50vh;
     right: 50%;
     transform: translate(50%);
     outline: none;
@@ -515,7 +519,7 @@ a.active {
   }
 
   .canvaswrapper {
-    height: 50vh;
+    height: 30vh;
   }
 
   // #difficulty-holder{
