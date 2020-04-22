@@ -15,7 +15,14 @@ function App() {
         <a id="hamburger" className="hamburger hidden" href="#">
           <span></span>
         </a>
-        <img className="logo" src={nissanlogo} alt="" />
+        <button
+          type="submit"
+          id="back-mobi"
+          className="btn btn-secondary hidden"
+        >
+          &lt;
+        </button>
+        {/* <img className="logo" src={nissanlogo} alt="" /> */}
         <h2 id="streetview" className="">Streetview Puzzle</h2>
         {/* <br /> */}
         <div id="timer-holder" className="hidden">

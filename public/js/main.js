@@ -85,9 +85,9 @@ function resetTimer() {
   hours = 0;
   mins = 0;
   seconds = 0;
-  document.getElementById("hours").innerHTML ="00";
+  document.getElementById("hours").innerHTML = "00";
   document.getElementById("minutes").innerHTML = "00";
-  document.getElementById("seconds").innerHTML ="00";
+  document.getElementById("seconds").innerHTML = "00";
   stopTimer();
 }
 
@@ -245,8 +245,8 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
       },
 
       resetPuzzle: function () {
-		console.log("Reseting");
-		resetTimer();
+        console.log("Reseting");
+        resetTimer();
         startTimer();
         document.getElementById("body").className = "";
         // document.getElementById('options').className = 'optionswrapper';
@@ -284,7 +284,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         js.canvas.addEventListener(
           onmove,
           function (e) {
-			  e.preventDefault();
+            e.preventDefault();
             if (js.clickedpiece !== -1) {
               js.general.movePiece(e);
             }
@@ -429,26 +429,26 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
 
           if (js.pieces.length === 0) {
             document.getElementById("body").className = "solved";
-			// alert("YEEET");
-			stopTimer();
-			var timecomplete = "00:00:00";
-			if(document.getElementById("hours").innerText == "00"){
-				if(document.getElementById("minutes").innerText == "00"){
-					timecomplete = document.getElementById("seconds").innerText + " seconds ";
-				}
-				else{
-					if(document.getElementById("minutes").innerText == "01"){
-						timecomplete = document.getElementById("minutes").innerText + " minute and " + document.getElementById("seconds").innerText + " seconds ";
-					}else{
-						timecomplete =   document.getElementById("minutes").innerText + " minutes and " + document.getElementById("seconds").innerText + " seconds ";
-					}
-					
-				}
-			}
-			else{
-				timecomplete = document.getElementById("hours").innerText + "hours, " + document.getElementById("minutes").innerText + " minutes and " + document.getElementById("seconds").innerText + " seconds ";
-			}
-			document.getElementById("end-time").innerHTML = timecomplete;
+            // alert("YEEET");
+            stopTimer();
+            var timecomplete = "00:00:00";
+            if (document.getElementById("hours").innerText == "00") {
+              if (document.getElementById("minutes").innerText == "00") {
+                timecomplete = document.getElementById("seconds").innerText + " seconds ";
+              }
+              else {
+                if (document.getElementById("minutes").innerText == "01") {
+                  timecomplete = document.getElementById("minutes").innerText + " minute and " + document.getElementById("seconds").innerText + " seconds ";
+                } else {
+                  timecomplete = document.getElementById("minutes").innerText + " minutes and " + document.getElementById("seconds").innerText + " seconds ";
+                }
+
+              }
+            }
+            else {
+              timecomplete = document.getElementById("hours").innerText + "hours, " + document.getElementById("minutes").innerText + " minutes and " + document.getElementById("seconds").innerText + " seconds ";
+            }
+            document.getElementById("end-time").innerHTML = timecomplete;
             setTimeout(function () {
               document
                 .getElementById("share-overlay")
@@ -571,8 +571,8 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
       updateSettings1: function () {
         // alert("CHAAAANGEEES");
         // var elAcross = document.getElementById('piecesx');
-		// var elDown = document.getElementById('piecesy');
-		resetTimer();
+        // var elDown = document.getElementById('piecesy');
+        resetTimer();
         startTimer();
         document.getElementById("intro").classList.add("hide");
         document.getElementById("hamburger").classList.remove("active");
@@ -580,6 +580,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("resetPuzzle").classList.remove("hidden");
         document.getElementById("timer-holder").classList.remove("hidden");
         document.getElementById("streetview").classList.add("hidden");
+        document.getElementById("back-mobi").classList.toggle("hidden");
         document.getElementById("body").className = "";
         var across = piecex;
         var down = piecey;
@@ -607,8 +608,8 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
       updateSettings2: function () {
         // alert("CHAAAANGEEES");
         // var elAcross = document.getElementById('piecesx');
-		// var elDown = document.getElementById('piecesy');
-		resetTimer();
+        // var elDown = document.getElementById('piecesy');
+        resetTimer();
         startTimer();
         document.getElementById("intro").classList.add("hide");
         document.getElementById("hamburger").classList.remove("active");
@@ -616,6 +617,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("resetPuzzle").classList.remove("hidden");
         document.getElementById("timer-holder").classList.remove("hidden");
         document.getElementById("streetview").classList.add("hidden");
+        document.getElementById("back-mobi").classList.toggle("hidden");
         document.getElementById("body").className = "";
         var across = piecex;
         var down = piecey;
@@ -642,8 +644,8 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
       updateSettings3: function () {
         // alert("CHAAAANGEEES");
         // var elAcross = document.getElementById('piecesx');
-		// var elDown = document.getElementById('piecesy');
-		resetTimer();
+        // var elDown = document.getElementById('piecesy');
+        resetTimer();
         startTimer();
         document.getElementById("intro").classList.add("hide");
         document.getElementById("hamburger").classList.remove("active");
@@ -651,6 +653,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("resetPuzzle").classList.remove("hidden");
         document.getElementById("timer-holder").classList.remove("hidden");
         document.getElementById("streetview").classList.add("hidden");
+        document.getElementById("back-mobi").classList.toggle("hidden");
         document.getElementById("body").className = "";
         currPuzzle = 2;
         var across = piecex;
@@ -928,6 +931,14 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
 window.onload = function () {
   document.getElementById("hamburger").onclick = function () {
     document.getElementById("hamburger").classList.toggle("active");
+    document.getElementById("intro").classList.toggle("hide");
+    document.getElementById("timer-holder").classList.toggle("hidden");
+    document.getElementById("resetPuzzle").classList.toggle("hidden");
+    document.getElementById("streetview").classList.toggle("hidden");
+  };
+
+  document.getElementById("back-mobi").onclick = function () {
+    document.getElementById("back-mobi").classList.toggle("hidden");
     document.getElementById("intro").classList.toggle("hide");
     document.getElementById("timer-holder").classList.toggle("hidden");
     document.getElementById("resetPuzzle").classList.toggle("hidden");

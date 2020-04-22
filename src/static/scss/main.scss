@@ -146,6 +146,11 @@ input.btn {
   }
 }
 
+button#back-mobi {
+display: none;
+}
+
+
 .expand {
   font-size: 24px;
   display: flex;
@@ -194,6 +199,7 @@ button#resetPuzzle {
     opacity: 0;
   }
 }
+
 
 .share-overlay {
   display: block;
@@ -432,8 +438,13 @@ a.active {
     width: 80% !important;
   }
 
+  #timer-holder{
+    padding-top: 18vh;
+  }
+
   h2 {
     font-size: 20px;
+    padding-top: 70px;
   }
   .intro {
     top: 25vh;
@@ -447,11 +458,20 @@ a.active {
     outline: none;
   }
 
-  a.hamburger {
+  button#back-mobi {
+    display: block;
+    position: absolute;
+    top: 58px;
     left: 20px;
-    /* transform: translate(-50%); */
-    z-index: 2;
-    top: 60px;
+    opacity: 1;
+    &.hidden {
+      opacity: 0;
+    }
+  }
+  
+
+  a.hamburger {
+  display: none;
   }
 
   .logo {
