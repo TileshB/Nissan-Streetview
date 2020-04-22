@@ -95,10 +95,10 @@ function stopTimer() {
   clearTimeout(timex);
 }
 
-for (var im = 0; im < allimages.length; im++) {
-  imageloadtotal += allimages[im].images.length;
-  callAllPreloads(allimages[im].images, imgpath + allimages[im].dir + "/");
-}
+// for (var im = 0; im < allimages.length; im++) {
+//   imageloadtotal += allimages[im].images.length;
+//   callAllPreloads(allimages[im].images, imgpath + allimages[im].dir + "/");
+// }
 
 function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
   this.x = x;
@@ -440,13 +440,13 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
 					if(document.getElementById("minutes").innerText == "01"){
 						timecomplete = document.getElementById("minutes").innerText + " minute and " + document.getElementById("seconds").innerText + " seconds ";
 					}else{
-						timecomplete =  document.getElementById("hours").innerText + "hours, " + document.getElementById("minutes").innerText + " minutes and " + document.getElementById("seconds").innerText + " seconds ";
+						timecomplete =   document.getElementById("minutes").innerText + " minutes and " + document.getElementById("seconds").innerText + " seconds ";
 					}
 					
 				}
 			}
 			else{
-				timecomplete = document.getElementById("minutes").innerText + " minute and " + document.getElementById("seconds").innerText + " seconds ";
+				timecomplete = document.getElementById("hours").innerText + "hours, " + document.getElementById("minutes").innerText + " minutes and " + document.getElementById("seconds").innerText + " seconds ";
 			}
 			document.getElementById("end-time").innerHTML = timecomplete;
             setTimeout(function () {
@@ -578,6 +578,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("hamburger").classList.remove("active");
         document.getElementById("hamburger").classList.remove("hidden");
         document.getElementById("resetPuzzle").classList.remove("hidden");
+        document.getElementById("timer-holder").classList.remove("hidden");
         document.getElementById("body").className = "";
         var across = piecex;
         var down = piecey;
@@ -612,6 +613,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("hamburger").classList.remove("active");
         document.getElementById("hamburger").classList.remove("hidden");
         document.getElementById("resetPuzzle").classList.remove("hidden");
+        document.getElementById("timer-holder").classList.remove("hidden");
         document.getElementById("body").className = "";
         var across = piecex;
         var down = piecey;
@@ -645,6 +647,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         document.getElementById("hamburger").classList.remove("active");
         document.getElementById("hamburger").classList.remove("hidden");
         document.getElementById("resetPuzzle").classList.remove("hidden");
+        document.getElementById("timer-holder").classList.remove("hidden");
         document.getElementById("body").className = "";
         currPuzzle = 2;
         var across = piecex;
@@ -923,6 +926,8 @@ window.onload = function () {
   document.getElementById("hamburger").onclick = function () {
     document.getElementById("hamburger").classList.toggle("active");
     document.getElementById("intro").classList.toggle("hide");
+    document.getElementById("timer-holder").classList.toggle("hidden");
+    document.getElementById("resetPuzzle").classList.toggle("hidden");
   };
 
   this.document.getElementById("expand").onclick = function () {

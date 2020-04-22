@@ -11,14 +11,20 @@ function App() {
   return (
     <div className="App">
       <div className="header">
+        <div id="mobi">On mobile the game is best enjoyed in landscape mode on your device</div>
         <a id="hamburger" className="hamburger hidden" href="#">
           <span></span>
         </a>
         <img className="logo" src={nissanlogo} alt="" />
         <h2>Streetview Puzzle</h2>
         {/* <br /> */}
-        <h3>Timer</h3>
-        <p className="time"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></p>
+        <div id="timer-holder" className="hidden">
+          <h3>Timer</h3>
+          <p className="time">
+            <span id="hours">00</span>:<span id="minutes">00</span>:
+            <span id="seconds">00</span>
+          </p>
+        </div>
         <button
           type="submit"
           id="resetPuzzle"
@@ -28,30 +34,33 @@ function App() {
         </button>
       </div>
       <div className="intro" id="intro">
-        <p>Difficulty</p>
-        <div>
-          <button
-            type="submit"
-            id="easy"
-            className="btn btn-secondary difficult active"
-          >
-            Easy
-          </button>
-          <button
-            type="submit"
-            id="medium"
-            className="btn btn-secondary difficult"
-          >
-            Medium
-          </button>
-          <button
-            type="submit"
-            id="hard"
-            className="btn btn-secondary difficult"
-          >
-            Hard
-          </button>
+        <div id="difficulty-holder">
+          <p>Difficulty</p>
+          <div>
+            <button
+              type="submit"
+              id="easy"
+              className="btn btn-secondary difficult active"
+            >
+              Easy
+            </button>
+            <button
+              type="submit"
+              id="medium"
+              className="btn btn-secondary difficult"
+            >
+              Medium
+            </button>
+            <button
+              type="submit"
+              id="hard"
+              className="btn btn-secondary difficult"
+            >
+              Hard
+            </button>
+          </div>
         </div>
+
         <p>Choose a puzzle</p>
         <br />
         <img className="imgChoice" id="option1" src={img1} alt="" />
@@ -61,15 +70,26 @@ function App() {
       <div id="share-overlay" className="share-overlay closed">
         {/* <!-- <a href="#" id="download-image">Download Image</a> --> */}
         <a id="close">x</a>
-        <p>Congratulations you finished that in <span id="end-time"></span>! Enjoyed that puzzle? Share the experience</p>
+        <p>
+          Congratulations you finished that in <span id="end-time"></span>!
+          Enjoyed that puzzle? Share the experience
+        </p>
         <div className="icons">
           <a
             href="https://www.facebook.com/sharer.php?u=URL"
             target="_blank"
             className="fa fa-facebook"
           ></a>
-          <a href="https://twitter.com/intent/tweet?text=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&url=URL" target="_blank" className="fa fa-twitter"></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&title=Nissan-Streetview-Puzzle&summary=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&source=Nissan&url=URL" target="_blank" className="fa fa-linkedin"></a>
+          <a
+            href="https://twitter.com/intent/tweet?text=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&url=URL"
+            target="_blank"
+            className="fa fa-twitter"
+          ></a>
+          <a
+            href="https://www.linkedin.com/shareArticle?mini=true&title=Nissan-Streetview-Puzzle&summary=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&source=Nissan&url=URL"
+            target="_blank"
+            className="fa fa-linkedin"
+          ></a>
         </div>
       </div>
       <div className="canvaswrapper" id="canvasparent">

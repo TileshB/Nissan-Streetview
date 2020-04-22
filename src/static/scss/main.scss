@@ -23,6 +23,10 @@ body {
   }
 }
 
+div#mobi{
+  display: none;
+}
+
 :not(:root):fullscreen::backdrop {
   background: white;
 }
@@ -61,6 +65,13 @@ input.btn {
   height: 2em * 1.04;
   &.btn-small {
     height: 2em / 1.4;
+  }
+}
+
+#timer-holder {
+  opacity: 1;
+  &.hidden {
+    opacity: 0;
   }
 }
 
@@ -105,31 +116,34 @@ input.btn {
   &.btn-secondary {
     background: #c3002f;
     outline: none;
-    &:hover{
+    &:hover {
       background: #920023;
     }
   }
-  &.difficult{
+  &.difficult {
     background: #eee;
     color: black;
-    &:hover{
+    border-radius: 0px;
+    &:hover {
       background: #c3002f;
       color: white;
+      border-radius: 3px;
     }
-    &.active{
+    &.active {
       background: #c3002f;
       color: white;
+      border-radius: 3px;
     }
   }
 }
 
-.expand{
+.expand {
   font-size: 24px;
-    display: flex;
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    cursor: pointer;
+  display: flex;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  cursor: pointer;
 }
 
 .intro {
@@ -413,7 +427,7 @@ a.active {
     font-size: 20px;
   }
   .intro {
-    top: 30%;
+    top: 25vh;
   }
 
   button#resetPuzzle {
@@ -425,10 +439,10 @@ a.active {
   }
 
   a.hamburger {
-    left: 50%;
-    transform: translate(-50%);
+    left: 20px;
+    /* transform: translate(-50%); */
     z-index: 2;
-    top: 15px;
+    top: 60px;
   }
 
   .logo {
@@ -438,6 +452,22 @@ a.active {
   .canvaswrapper {
     height: 100%;
   }
+
+  // #difficulty-holder{
+  //   display: none;
+  // }
+
+  div#mobi {
+    display: block;
+    position: fixed;
+    top: 0px;
+    /* left: 50%; */
+    left: 0px;
+    width: 100%;
+    background: #e1e1e1;
+    padding: 2px 0px 5px 0px;
+    text-align: center;
+}
 
   .share-overlay {
     width: 65vw;
@@ -453,6 +483,7 @@ a.active {
       height: 15px;
       font-size: 15px;
       padding: 15px;
+      margin: 15px;
     }
   }
 }

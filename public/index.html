@@ -33,6 +33,13 @@
     <link rel="stylesheet" media="print, screen"
       href="//libs-europe.nissan-cdn.net/etc/designs/nissan_next_v3/20.04.6.NISSAN-19/common-assets/css/fonts/fonts-latin-basic.min.css"
       as="style" onload="this.rel='stylesheet'" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="./js/iframe.js"></script>
+      <script type="text/javascript">
+        function resizeIframe(obj) {
+          obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+      </script>
     <title>React App</title>
   </head>
   <body id="body">
