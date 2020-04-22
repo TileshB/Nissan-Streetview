@@ -450,11 +450,15 @@ a.active {
   display: none;
   }
 
+  .intro{
+    height: 140vh;
+  }
+
   button#resetPuzzle {
     position: absolute;
-    top: 90vh;
-    right: 50%;
-    transform: translate(50%);
+    top: 58px;
+    right: 20px;
+    // transform: translate(50%);
     outline: none;
   }
 
