@@ -158,9 +158,9 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         // var url = URL.createObjectURL(allimages[currPuzzle].images[0]);
         js.puzzle = new Image();
         // console.log("Curr puzzle: ", currPuzzle)
-        js.puzzle.onload = function(){
-          console.log('image loaded')
-        }
+        // js.puzzle.onload = function(){
+        //   console.log('image loaded')
+        // }
         document.getElementById("body").className = "";
         js.puzzle.src = allimages[currPuzzle].images[0];
         js.idealw = js.puzzle.width;
