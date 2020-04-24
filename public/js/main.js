@@ -67,6 +67,7 @@ function browserTest() {
   })();
 
   // console.log(navigator.sayswho.split(" ")[1]);
+  console.log(navigator.sayswho);
   browser = navigator.sayswho.split(" ")[0];
   version = parseInt(navigator.sayswho.split(" ")[1]);
   switch (browser) {
@@ -76,7 +77,7 @@ function browserTest() {
       }
       break;
     case "Safari":
-      if (version < 13) {
+      if (version < 12) {
         document.getElementById("alert").classList.toggle("hidden");
       }
       break;
@@ -87,11 +88,6 @@ function browserTest() {
       break;
     case "Firefox":
       if (version < 75) {
-        document.getElementById("alert").classList.toggle("hidden");
-      }
-      break;
-    case "Opera":
-      if (version < 67) {
         document.getElementById("alert").classList.toggle("hidden");
       }
       break;

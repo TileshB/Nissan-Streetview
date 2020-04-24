@@ -84,17 +84,17 @@ function App() {
         </p>
         <div className="icons">
           <a
-            href="https://www.facebook.com/sharer.php?u=URL"
+            href="https://www.facebook.com/sharer.php?u=https://www.nissan.co.za//covid-19-update/lockdown-activities/Streetview-puzzle.html"
             target="_blank"
             className="fa fa-facebook"
           ></a>
           <a
-            href="https://twitter.com/intent/tweet?text=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&url=URL"
+            href="https://twitter.com/intent/tweet?text=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&url=https://www.nissan.co.za//covid-19-update/lockdown-activities/Streetview-puzzle.html"
             target="_blank"
             className="fa fa-twitter"
           ></a>
           <a
-            href="https://www.linkedin.com/shareArticle?mini=true&title=Nissan-Streetview-Puzzle&summary=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&source=Nissan&url=URL"
+            href="https://www.linkedin.com/shareArticle?mini=true&title=Nissan-Streetview-Puzzle&summary=I+finished+the+Nissan+streetview+puzzle+!+Give+it+a+try+for+yourself.&source=Nissan&url=https://www.nissan.co.za//covid-19-update/lockdown-activities/Streetview-puzzle.html"
             target="_blank"
             className="fa fa-linkedin"
           ></a>
