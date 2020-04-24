@@ -156,20 +156,26 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
 
       initPuzzle: function () {
         // var url = URL.createObjectURL(allimages[currPuzzle].images[0]);
-        js.puzzle = new Image();
+        js.puzzle = new Image(1555, 1037);
+        js.puzzle.onload = function(){
+          console.log(js.puzzle)
+        }
+        setTimeout(() => {
+          document.getElementById("body").className = "";
+          js.puzzle.src = allimages[currPuzzle].images[0];
+          js.idealw = js.puzzle.width;
+          js.idealh = js.puzzle.height;
+          js.general.initCanvasSize();
+          js.savedcanvasw = js.canvasw;
+          js.savedcanvash = js.canvash;
+          js.piececountx = piecex;
+          js.piececounty = piecey;
+          // document.getElementById('piecesx').value = js.piececountx;
+          // document.getElementById('piecesy').value = js.piececounty;
+          js.general.createPieces();
+        }, 100);
         // console.log("Curr puzzle: ", currPuzzle)
-        document.getElementById("body").className = "";
-        js.puzzle.src = allimages[currPuzzle].images[0];
-        js.idealw = js.puzzle.width;
-        js.idealh = js.puzzle.height;
-        js.general.initCanvasSize();
-        js.savedcanvasw = js.canvasw;
-        js.savedcanvash = js.canvash;
-        js.piececountx = piecex;
-        js.piececounty = piecey;
-        // document.getElementById('piecesx').value = js.piececountx;
-        // document.getElementById('piecesy').value = js.piececounty;
-        js.general.createPieces();
+
       },
 
       //initialise the size of the canvas based on the ideal aspect ratio and the size of the parent element
