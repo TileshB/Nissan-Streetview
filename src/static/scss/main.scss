@@ -35,6 +35,20 @@ div#mobi{
   }
 }
 
+#alert{
+  display: block;
+  position: fixed;
+  top: 0px;
+  /* left: 50%; */
+  left: 0px;
+  width: 100%;
+  background: #e1e1e1;
+  padding: 2px 0px 5px 0px;
+  text-align: center;
+  &.hidden{
+    display: none;
+  }
+}
 
 :not(:root):fullscreen::backdrop {
   background: white;

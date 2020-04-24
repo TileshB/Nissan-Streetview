@@ -45,6 +45,61 @@ function loadFile(src, array, num) {
   return deferred.promise();
 }
 
+function browserTest() {
+  navigator.sayswho = (function () {
+    var ua = navigator.userAgent,
+      tem,
+      M =
+        ua.match(
+          /(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i
+        ) || [];
+    if (/trident/i.test(M[1])) {
+      tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+      return "IE " + (tem[1] || "");
+    }
+    if (M[1] === "Chrome") {
+      tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+      if (tem != null) return tem.slice(1).join(" ").replace("OPR", "Opera");
+    }
+    M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, "-?"];
+    if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
+    return M.join(" ");
+  })();
+
+  // console.log(navigator.sayswho.split(" ")[1]);
+  browser = navigator.sayswho.split(" ")[0];
+  version = parseInt(navigator.sayswho.split(" ")[1]);
+  switch (browser) {
+    case "Chrome":
+      if (version < 81) {
+        document.getElementById("alert").classList.toggle("hidden");
+      }
+      break;
+    case "Safari":
+      if (version < 13) {
+        document.getElementById("alert").classList.toggle("hidden");
+      }
+      break;
+    case "Edge":
+      if (version < 80) {
+        document.getElementById("alert").classList.toggle("hidden");
+      }
+      break;
+    case "Firefox":
+      if (version < 75) {
+        document.getElementById("alert").classList.toggle("hidden");
+      }
+      break;
+    case "Opera":
+      if (version < 67) {
+        document.getElementById("alert").classList.toggle("hidden");
+      }
+      break;
+    default:
+      break;
+  }
+}
+
 //loop through and call all the preload images
 function callAllPreloads(array, dir) {
   for (var z = 0; z < array.length; z++) {
@@ -935,6 +990,9 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
 })(window);
 
 window.onload = function () {
+
+  this.browserTest();
+
   document.getElementById("hamburger").onclick = function () {
     document.getElementById("hamburger").classList.toggle("active");
     document.getElementById("intro").classList.toggle("hide");

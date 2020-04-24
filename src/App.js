@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       <div className="header">
         <div id="mobi">On mobile the game is best enjoyed in landscape mode on your device</div>
+        <div id="alert" className="hidden"> This experience runs best on the latest versions of Chrome, Firefox, Edge and Safari</div>
         <a id="hamburger" className="hamburger hidden" href="#">
           <span></span>
         </a>
