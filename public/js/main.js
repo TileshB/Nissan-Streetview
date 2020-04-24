@@ -160,7 +160,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
         js.puzzle.onload = function(){
           console.log(js.puzzle)
         }
-        setTimeout(() => {
+        // setTimeout(() => {
           document.getElementById("body").className = "";
           js.puzzle.src = allimages[currPuzzle].images[0];
           js.idealw = js.puzzle.width;
@@ -173,7 +173,7 @@ function NewPiece(x, y, w, h, solvedx, solvedy, spritex, spritey, rowx, rowy) {
           // document.getElementById('piecesx').value = js.piececountx;
           // document.getElementById('piecesy').value = js.piececounty;
           js.general.createPieces();
-        }, 100);
+        // }, 100);
         // console.log("Curr puzzle: ", currPuzzle)
 
       },
