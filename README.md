@@ -1,3 +1,16 @@
+## Nissan Streetview Puzzle Game
+
+Instructions on adapting the puzzle:
+1. Edit any copy, linking etc in App.js file found in ./src
+2. Changing and/or replacing images below:
+  1. Place updated puzzle images(plain jpg without any puzzle edits etc) in the folder: ./src/img
+  2. Import those images at the top of App.js such as 'import newPuzzle from "./static/img/puzzle-1.jpg";'
+  3. Further down in the App.js file, replace the src for the image choices such as "<img className="imgChoice" id="option1" src={newPuzzle} alt="" />"
+  4. Run the program locally by typing "npm start" and get the url for each image using the inspector such as "/static/media/puzzle-    3.542683fc.jpg" as this is the compiled URL for this image.
+  5. Place the compiled URLs in the main.js file ,found at /public/js/main.js, at the top of the file next to "images" : ["url here]" in the same order as the choices in the choice menu for the puzzle.
+ 3. Change code in public/js/iframe.js to suit where you wish to iframe this game
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
