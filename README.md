@@ -1,5 +1,8 @@
 ## Nissan Streetview Puzzle Game
 
+This was a puzzle game created in React for Nissan during the lockdown. The execution can be seen at: 
+https://www.nissan.co.za/covid-19-update/lockdown-activities/Streetview-puzzle.html
+
 Instructions on adapting the puzzle:
 
 1. Edit any copy, linking etc in App.js file found in ./src
